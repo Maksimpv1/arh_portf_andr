@@ -27,7 +27,15 @@ export default function Header({ overlay }) {
   }, [open])
 
   return (
-    <header className={overlay ? 'header header--overlay' : 'header'}>
+    <header
+      className={[
+        'header',
+        overlay ? 'header--overlay' : '',
+        open ? 'header--open' : '',
+      ]
+        .filter(Boolean)
+        .join(' ')}
+    >
       <Logo />
 
       <nav className="nav nav--desktop" aria-label="Main">

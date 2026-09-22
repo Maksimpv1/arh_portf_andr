@@ -36,15 +36,9 @@ export default function Project() {
           <img src={photo} alt="" />
         </button>
         {gallery.length > 1 && (
-          <div className="project__dots">
+          <div className="project__dots" aria-hidden="true">
             {gallery.map((_, i) => (
-              <button
-                key={photo + i}
-                type="button"
-                className={i === index ? 'dot is-active' : 'dot'}
-                aria-label={`Photo ${i + 1}`}
-                onClick={() => setIndex(i)}
-              />
+              <span key={i} className={i === index ? 'dot is-active' : 'dot'} />
             ))}
           </div>
         )}

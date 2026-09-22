@@ -142,6 +142,10 @@ main {
   background: transparent;
 }
 
+.header--open {
+  background: #fff;
+}
+
 .logo {
   font-weight: 900;
   font-size: 22px;
@@ -423,10 +427,11 @@ main {
 
 .project__dots {
   position: absolute;
-  top: 18px;
-  left: 18px;
+  top: 16px;
+  left: var(--pad);
   display: flex;
   gap: 8px;
+  pointer-events: none;
 }
 
 .dot {
@@ -523,7 +528,7 @@ main {
     inset: 0;
     background: #fff;
     padding: 88px var(--pad) 40px;
-    z-index: 25;
+    z-index: 20;
   }
 
   .nav-mobile .nav__link {
