@@ -71,7 +71,21 @@ export const projects = [
     slug: 'levada',
     year: '2022',
     cover: '/images/levada-cover.jpg',
-    gallery: ['/images/levada-1.jpg', '/images/levada-cover.jpg'],
+    meta: {
+      ru: 'Боровляны / 2018',
+      en: 'Borovlyany / 2018',
+      by: 'Бараўляны / 2018',
+    },
+    gallery: [
+      '/images/levada/web-01.jpg',
+      '/images/levada/web-02.jpg',
+      '/images/levada/web-03.jpg',
+      '/images/levada/web-07.jpg',
+      '/images/levada/web-04.jpg',
+      '/images/levada/web-05.jpg',
+      '/images/levada/web-10.jpg',
+      '/images/levada/web-12.jpg',
+    ],
     title: { ru: 'Левада', en: 'Levada', by: 'Левада' },
     description: {
       ru: 'Небольшая мансардная квартира 30 м² для молодой семьи с ребёнком в Боровлянах. На антресоли — спальня и игровая. На первом уровне — кухня, гостиная, рабочая зона, санузел, открытый балкон и лестница, соединяющая этажи.',
@@ -95,7 +109,7 @@ export const projects = [
     slug: 'petrovskie-verfi',
     year: '2022',
     cover: '/images/petrovskie-cover.jpg',
-    gallery: ['/images/petrovskie-1.jpg', '/images/petrovskie-cover.jpg'],
+    gallery: ['/images/petrovskie-cover.jpg'],
     title: {
       ru: 'Петровские верфи',
       en: 'Petrovskie Verfi',
