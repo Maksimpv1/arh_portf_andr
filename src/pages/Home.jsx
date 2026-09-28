@@ -1,12 +1,10 @@
-import { Link } from 'react-router-dom'
 import { Reveal } from '../components/Reveal.jsx'
-import { copy, projects, publications, site } from '../data/content'
-import { tx, useI18n } from '../i18n/I18n.jsx'
+import { copy, publications } from '../data/content'
+import { useI18n } from '../i18n/I18n.jsx'
 
 export default function Home() {
   const { lang } = useI18n()
   const t = copy[lang]
-  const featured = projects[projects.length - 1]
 
   return (
     <div className="home-stack">
@@ -51,27 +49,9 @@ export default function Home() {
                 </li>
               ))}
             </Reveal>
-
-            <Reveal as="p" className="about__invite" delay={40}>
-              {t.contactsInvite}
-            </Reveal>
-            <Reveal as="div" className="about__contacts" delay={80}>
-              <a href={site.phoneHref}>
-                {site.phone} <span>({site.messengers})</span>
-              </a>
-              <a href={`mailto:${site.email}`}>{site.email}</a>
-            </Reveal>
           </div>
         </section>
       </div>
-
-      <Reveal as="div" className="featured-reveal reveal--media" delay={0}>
-        <Link to={`/projects/${featured.slug}`} className="featured">
-          <img src={featured.cover} alt={tx(featured.title, lang)} />
-          <span className="featured__name">{tx(featured.title, lang)}</span>
-          <span className="featured__year">{featured.year}</span>
-        </Link>
-      </Reveal>
     </div>
   )
 }
